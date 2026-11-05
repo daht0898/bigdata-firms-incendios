@@ -15,7 +15,7 @@ output_dir = os.path.join(base_dir, "data/output")
 
 @st.cache_data
 def cargar_csv(nombre):
-    return pd.read_csv(os.path.join(output_dir, nombre))
+    return pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "output", nombre))
 
 @st.cache_data(ttl=30)
 def cargar_api(ruta, es_lista=True):

@@ -1,0 +1,15 @@
+{
+    "algoritmo": "K-Means Spark MLlib",
+    "muestra": "3% aleatorio del dataset procesado",
+    "seed": 42,
+    "entrenamiento_registros": 22543,
+    "prueba_registros": 5525,
+    "metrica": "Silhouette en conjunto de prueba",
+    "resultados": {
+        "k_2": 0.454297,
+        "k_3": 0.44994
+    },
+    "linea_base": "K-Means con k=2",
+    "modelo_evaluado": "K-Means con k=3",
+    "nota": "Evaluacion independiente de la configuracion; no sustituye el modelo original del dashboard."
+}

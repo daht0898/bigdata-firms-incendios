@@ -1,0 +1,45 @@
+[
+    {
+        "caso": "Real_1",
+        "estado": "ACEPTADO",
+        "errores": []
+    },
+    {
+        "caso": "Real_2",
+        "estado": "ACEPTADO",
+        "errores": []
+    },
+    {
+        "caso": "Real_3",
+        "estado": "ACEPTADO",
+        "errores": []
+    },
+    {
+        "caso": "Latitud_invalida",
+        "estado": "RECHAZADO",
+        "errores": [
+            "Latitud fuera de rango"
+        ]
+    },
+    {
+        "caso": "FRP_invalido",
+        "estado": "RECHAZADO",
+        "errores": [
+            "FRP invalido"
+        ]
+    },
+    {
+        "caso": "Fecha_invalida",
+        "estado": "RECHAZADO",
+        "errores": [
+            "Fecha invalida"
+        ]
+    },
+    {
+        "caso": "Confianza_invalida",
+        "estado": "RECHAZADO",
+        "errores": [
+            "Confianza invalida"
+        ]
+    }
+]

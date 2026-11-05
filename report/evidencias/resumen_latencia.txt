@@ -1,0 +1,18 @@
+
+RESULTADOS DE LATENCIA - PROTOTIPO v0.2
+
+Endpoint: http://127.0.0.1:8000/api/clusters
+Cliente de prueba: cliente_prueba_latencia
+Peticiones exitosas: 110
+
+LATENCIA DESDE EL CLIENTE
+p50: 50.995 ms
+p95: 104.514 ms
+Promedio: 63.622 ms
+
+LATENCIA REGISTRADA POR FASTAPI
+p50: 1.007 ms
+p95: 1.496 ms
+Promedio: 1.076 ms
+
+Ambiente: Ubuntu / ejecución local

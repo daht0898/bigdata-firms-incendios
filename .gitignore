@@ -1,0 +1,40 @@
+# Entornos virtuales
+.venv/
+venv/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Datos pesados
+data/raw/
+data/processed/
+
+# Base de datos local
+data/firms.sqlite3
+
+# Configuraciones privadas
+.env
+.env.*
+!.env.example
+
+# Archivos temporales
+*.log
+.DS_Store
+
+# Notas personales de ejecución
+comandos_equipo*.txt
+ed -n*
+
+# Resultados intermedios del procesamiento Spark
+data/output/*
+
+# Conservar únicamente los CSV finales del dashboard
+!data/output/*_final.csv
+
+# Conservar la muestra geográfica de 50,000 puntos
+!data/output/puntos_cluster_dashboard_sample.csv
+
+# Excluir el archivo geográfico completo de 59 MB
+data/output/puntos_cluster_dashboard_final.csv

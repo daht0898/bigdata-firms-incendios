@@ -1,0 +1,8 @@
+Peticiones: 110
+Exitosas: 110
+Tiempo promedio API: 1.076 ms
+Tiempo acumulado API: 118.372 ms
+Tiempo CPU proceso promedio: 1.070 ms
+Tiempo CPU proceso acumulado: 117.707 ms
+Ambiente: local
+Costo monetario: pendiente de tarifa verificable

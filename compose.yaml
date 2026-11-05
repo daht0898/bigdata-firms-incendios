@@ -1,0 +1,26 @@
+services:
+  api:
+    build: .
+    command: ["sh", "-c", "(test -f /app/data/firms.sqlite3 || python -m api.importar_datos) && exec python -m uvicorn api.main:app --host 0.0.0.0 --port 8000"]
+    ports:
+      - "127.0.0.1:8001:8000"
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  dashboard:
+    build: .
+    command: python -m streamlit run dashboard/app_api.py --server.address=0.0.0.0 --server.port=8501 --server.headless=true
+    ports:
+      - "127.0.0.1:8502:8501"
+    volumes:
+      - ./data:/app/data:ro
+    environment:
+      API_BASE_URL: http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
